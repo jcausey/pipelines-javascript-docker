@@ -1,22 +1,4 @@
 # Docker
-- task: Kubernetes@1
-  inputs:
-    connectionType: 'Kubernetes Service Connection'
-    kubernetesServiceEndpoint: 'jckube3'
-    command: 
-    secretType: 'dockerRegistry'
-    containerRegistryType: 'Azure Container Registry'
-- task: Kubernetes@1
-  inputs:
-    connectionType: 'Azure Resource Manager'
-    azureSubscriptionEndpoint: 'Azure Dev/Test(bde1e5a0-287e-4682-bd7e-7c17860970f6)'
-    azureResourceGroup: 'Network-DevTest-rg'
-    kubernetesCluster: 'tukube1d01'
-    command: 
-    secretType: 'dockerRegistry'
-    containerRegistryType: 'Azure Container Registry'
-# Build a Docker image 
-# https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
 trigger:
 - master
